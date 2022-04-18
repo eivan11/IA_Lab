@@ -49,10 +49,10 @@ done = False
 clock = pygame.time.Clock()
 with imageio.get_writer(video_filename, fps=60) as video:
     while not done:
-        clock.tick(60) # Alentar un poco, quitar si prefieren entrar en modo ultra instinto
+        clock.tick(60)
         img = env.render(mode='rgb_array')
         img = np.flipud(np.rot90(img))
-        image_np = imutils.resize(img, width=500) # Le ponenes un  tamano descente
+        image_np = imutils.resize(img, width=500)
         surf = pygame.surfarray.make_surface(image_np)
         screen.blit(surf, (0, 0))
         pygame.display.update()
