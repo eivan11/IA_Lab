@@ -30,10 +30,10 @@ env.reset()
 done = False
 clock = pygame.time.Clock()
 while not done:
-    clock.tick(60) # Alentar un poco, quitar si prefieren entrar en modo ultra instinto
-    img = env.render(mode='rgb_array') # Esta porqueria viene rotada, hay que darle forma.
-    img = np.flipud(np.rot90(img))# La rotamos
-    image_np = imutils.resize(img, width=500) # Le ponenes un  tamano descente
+    clock.tick(60)
+    img = env.render(mode='rgb_array')
+    img = np.flipud(np.rot90(img))
+    image_np = imutils.resize(img, width=500)
     surf = pygame.surfarray.make_surface(image_np)
     screen.blit(surf, (0, 0))
     pygame.display.update()
