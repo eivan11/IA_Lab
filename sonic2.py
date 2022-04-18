@@ -23,7 +23,7 @@ def key_action():
     return buttons
 
 pygame.init()
-env = retro.make('SonicTheHedgehog-Genesis', 'GreenHillZone.Act1', record=".")
+env = retro.make('SonicTheHedgehog-Genesis', 'GreenHillZone.Act1')
 screen = pygame.display.set_mode(video_size)
 env.reset()
 
